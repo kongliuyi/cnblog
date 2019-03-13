@@ -1,4 +1,4 @@
-﻿/*************************************************************************************
+/*************************************************************************************
  * 评论区 BEGIN
  *************************************************************************************/
 //添加 评论区的 形象照
@@ -101,7 +101,7 @@ function GenerateContentList() {
     var item = '';
     var originTitle = $(nodes[i]).text();
     var resolvedTitle = resolveTitle(originTitle);
-
+	$(nodes[i]).attr('id',resolvedTitle); 
     if (nodes[i].tagName === 'H1') {
       item = '<a style="font-size:18px" href="#' + resolvedTitle + '">' + $(nodes[i]).text() + '</a><br>';
     } else if (nodes[i].tagName === 'H2') {
